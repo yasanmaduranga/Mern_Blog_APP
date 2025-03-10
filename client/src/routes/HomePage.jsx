@@ -1,33 +1,35 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import MainCategories from '../components/MainCategories';
+import Featuredpost from '../components/Featuredpost';
+
 
 function HomePage() {
   return (
     <div className="mt-4 flex flex-col gap-4">
-        {/* BREADCRUMB */}
+        
       <div className="flex gap-4">
         <Link to="/">Home</Link>
         <span>•</span>
         <span className="text-blue-800">Blogs and Articles</span>
       </div>
-      {/* INTRODUCTION */}
+      
       <div className="flex items-center justify-between">
-        {/* titles */}
+        
         <div className="">
           <h1 className="text-gray-800 text-2xl md:text-5xl lg:text-6xl font-bold">
-            Document, Share, and Discuss Everything Tech.
+            Share and Discuss Everything Tech.
           </h1>
-          <p className="mt-8 text-md md:text-xl">
+          <p className="mt-4 text-md md:text-l">
             Tired of scattered notes and lost solutions? StackWrites is here to help. Write, organize, and share your technical knowledge in one place—helping both yourself and fellow developers build a smarter tech world.
           </p>
         </div>
-        {/* animated button */}
+       
         <Link to="write" className="hidden md:block relative">
           <svg
             viewBox="0 0 200 200"
-            width="250"
-            height="250"
-            // className="text-lg tracking-widest animate-spin animatedButton"
+            width="180"
+            height="180"
             className="text-lg tracking-widest"
           >
             <path
@@ -60,6 +62,11 @@ function HomePage() {
           </button>
         </Link>
       </div>
+
+      <MainCategories/>
+
+      <Featuredpost/>
+
     </div>
   )
 }
