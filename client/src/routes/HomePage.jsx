@@ -6,7 +6,7 @@ import Featuredpost from '../components/Featuredpost';
 
 function HomePage() {
   return (
-    <div className="mt-4 flex flex-col gap-4">
+    <div className="mt-1 flex flex-col gap-4">
         
       <div className="flex gap-4">
         <Link to="/">Home</Link>
@@ -17,7 +17,7 @@ function HomePage() {
       <div className="flex items-center justify-between">
         
         <div className="">
-          <h1 className="text-gray-800 text-2xl md:text-5xl lg:text-6xl font-bold">
+          <h1 className="text-gray-800 text-1xl md:text-3xl lg:text-4xl font-bold">
             Share and Discuss Everything Tech.
           </h1>
           <p className="mt-4 text-md md:text-l">
@@ -28,8 +28,8 @@ function HomePage() {
         <Link to="write" className="hidden md:block relative">
           <svg
             viewBox="0 0 200 200"
-            width="180"
-            height="180"
+            width="150"
+            height="150"
             className="text-lg tracking-widest"
           >
             <path
@@ -39,7 +39,7 @@ function HomePage() {
             />
             <text>
               <textPath href="#circlePath" startOffset="0%">
-                Share Your Knowledge •
+                Share What you Know •
               </textPath>
               <textPath href="#circlePath" startOffset="50%">
                 Tell Your Experience •

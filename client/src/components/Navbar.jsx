@@ -7,7 +7,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="w-full h-16 md:h-20 flex items-center justify-between">
+    <div className="w-full h-12 md:h-16 flex items-center justify-between py-2">
       <Link to="/" className="flex items-center gap-4 text-2xl font-bold">
         <Image src="Logo_Home.png" alt="Blog App Logo" w={32} h={32} />
         <span>StackWrites</span>

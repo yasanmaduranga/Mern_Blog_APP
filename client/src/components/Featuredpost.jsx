@@ -4,7 +4,7 @@ import Image from "./Image";
 
 function Featuredpost() {
   return (
-    <div className='mt-8 flex flex-col lg:flex-row gap-8'>
+    <div className='mt-2 flex flex-col lg:flex-row gap-8'>
         <div className='w-full lg:w-1/2 flex flex-col gap-4'>
             <Image src='featured1.jpeg' className='rounded-3xl object-cover'/>
             <div className='flex items-center gap-4'>
