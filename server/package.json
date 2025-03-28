@@ -1,0 +1,17 @@
+{
+  "name": "mern_blog_app",
+  "version": "1.0.0",
+  "description": "this is backend for mern blog application",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yasan madhuranga",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^5.0.1",
+    "nodemon": "^3.1.9"
+  }
+}
