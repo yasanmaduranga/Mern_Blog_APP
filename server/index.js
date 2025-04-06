@@ -10,6 +10,8 @@ dotenv.config();
 
 const app = express();
 
+app.use(express.json());
+
 const port = process.env.PORT || 8000;
 const mongoUrl = process.env.MONGOURL;
 
@@ -20,6 +22,16 @@ mongoose.connect(mongoUrl)
 app.use("/users", userRouter);
 app.use("/posts", postRouter);
 app.use("/comments", commentRouter);
+
+app.use((error, req, res, next) => {
+  res.status(error.status || 500);
+
+  res.json({
+    message: error.message || "Something went wrong!",
+    status: error.status,
+    stack: error.stack, // if we are not in production
+  });
+});
 
 app.listen(port, ()=>{
     console.log(`server is running on ${port}`);  
