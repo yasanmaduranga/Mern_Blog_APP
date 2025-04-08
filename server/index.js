@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import { clerkMiddleware, requireAuth } from "@clerk/express";
+import cors from "cors";
 
 import userRouter from './routes/user.route.js';
 import postRouter from './routes/post.route.js';
@@ -11,6 +12,7 @@ import webhookRouter from "./routes/webhook.route.js";
 dotenv.config();
 
 const app = express();
+app.use(cors(process.env.CLIENT_URL));
 app.use(clerkMiddleware());
 app.use("/webhooks", webhookRouter);
 app.use(express.json());
