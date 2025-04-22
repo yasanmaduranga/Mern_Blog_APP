@@ -72,7 +72,13 @@ const WritePage = () => {
           </select>
         </div>
         <textarea name="desc" placeholder="A Short Description" className="p-4 rounded-xl bg-white shadow-md"/>
-        <ReactQuill value={value} onChange={setValue} theme="snow" className="flex-1 rounded-xl bg-white shadow-md"/>
+        <div className="flex">
+          <div className="flex flex-col gap-2 mr-2">
+            <div className="cursor-pointer">@</div>
+            <div className="cursor-pointer">$</div>
+          </div>
+          <ReactQuill value={value} onChange={setValue} theme="snow" className="flex-1 rounded-xl bg-white shadow-md"/>
+        </div>
         <button disabled={mutation.isPending} className="bg-blue-800 text-white font-medium rounded-xl mt-4 p-2 w-36 disabled:bg-blue-400 disabled:cursor-not-allowed">{mutation.isPending ? "Loading..." : "Send"}</button>
       </form>
     </div>
