@@ -1,9 +1,8 @@
-import React from 'react';
 import { useState } from "react";
 import PostList from "../components/PostList";
 import SideMenu from "../components/SideMenu";
 
-function PostlistPage() {
+const PostListPage = () => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -25,6 +24,6 @@ function PostlistPage() {
       </div>
     </div>
   );
-}
+};
 
-export default PostlistPage;
+export default PostListPage;
